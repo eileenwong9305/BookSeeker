@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.bookseeker.DetailActivity">
+
+    <LinearLayout
+        android:id="@+id/image_layout"
+        style="@style/DetailImageLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_image_layout_height"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/detail_progress_layout"
+        android:layout_toRightOf="@+id/detail_progress_layout">
+
+        <ImageView
+            android:id="@+id/book_full_image"
+            android:layout_width="@dimen/detail_image_width"
+            android:layout_height="@dimen/detail_image_height"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_image_height"
+            android:layout_marginLeft="@dimen/margin_horizontal_16dp"
+            android:layout_marginStart="@dimen/margin_horizontal_16dp"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_vertical_8dp">
+
+            <TextView
+                android:id="@+id/title_detail_text"
+                style="@style/DetailTitleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/author_detail_text"
+                style="@style/DetailTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical_8dp"
+                tools:text="Author name" />
+
+            <TextView
+                android:id="@+id/date_detail_text"
+                style="@style/DetailTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Published date" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/image_layout"
+        android:background="@color/colorBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/description_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_horizontal_16dp"
+                android:layout_marginRight="@dimen/margin_horizontal_16dp"
+                android:layout_marginTop="@dimen/margin_vertical_16dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_horizontal_16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/DescriptionTitleStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_vertical_16dp"
+                        android:text="@string/description" />
+
+                    <TextView
+                        android:id="@+id/description_text"
+                        style="@style/DescriptionContentStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_horizontal_16dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_horizontal_16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/DescriptionTitleStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/additional_information" />
+
+                    <TextView
+                        android:id="@+id/language_text"
+                        style="@style/DescriptionContentStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Language:" />
+
+                    <TextView
+                        android:id="@+id/publisher_text"
+                        style="@style/DescriptionContentStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Publisher:" />
+
+                    <TextView
+                        android:id="@+id/category_text"
+                        style="@style/DescriptionContentStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Categories:" />
+
+                    <TextView
+                        android:id="@+id/page_count_text"
+                        style="@style/DescriptionContentStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Page Count:" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/detail_empty_text"
+        style="@style/ErrorTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/detail_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/detail_progress_bar"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DetailTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MainCardViewLayoutStyle">
+        <item name="android:paddingBottom">@dimen/card_vertical_padding</item>
+        <item name="android:paddingLeft">@dimen/margin_horizontal_16dp</item>
+        <item name="android:paddingRight">@dimen/margin_horizontal_16dp</item>
+        <item name="android:paddingTop">@dimen/card_vertical_padding</item>
+    </style>
+
+    <style name="MainTitleTextStyle">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/main_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MainSearchEditStyle">
+        <item name="android:background">@color/colorEdit</item>
+        <item name="android:inputType">text</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingLeft">@dimen/margin_horizontal_16dp</item>
+    </style>
+
+    <style name="MainSearchButtonStyle">
+        <item name="android:layout_marginTop">@dimen/margin_vertical_16dp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
+    <style name="SingleListLinearLayout">
+        <item name="android:paddingBottom">@dimen/margin_vertical_8dp</item>
+        <item name="android:paddingLeft">@dimen/margin_horizontal_8dp</item>
+        <item name="android:paddingRight">@dimen/margin_horizontal_8dp</item>
+        <item name="android:paddingTop">@dimen/margin_vertical_8dp</item>
+    </style>
+
+    <style name="SingleListImageStyle">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="SingleListTitleStyle">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/list_title_text_size</item>
+        <item name="android:layout_marginLeft">@dimen/margin_horizontal_16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SingleListTextStyle">
+        <item name="android:layout_marginLeft">@dimen/margin_horizontal_16dp</item>
+        <item name="android:textSize">@dimen/item_text_size</item>
+    </style>
+
+    <style name="SingleListTextStyle.Author">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="SearchLayoutStyle">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">@dimen/margin_vertical_8dp</item>
+    </style>
+
+    <style name="SearchEditStyle">
+        <item name="android:cursorVisible">false</item>
+        <item name="android:inputType">text</item>
+        <item name="android:lines">1</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ErrorTextStyle">
+        <item name="android:layout_margin">@dimen/margin_horizontal_16dp</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="DetailImageLayoutStyle">
+        <item name="android:background">@color/colorBookBackground</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingBottom">@dimen/margin_vertical_8dp</item>
+        <item name="android:paddingLeft">@dimen/margin_horizontal_16dp</item>
+        <item name="android:paddingRight">@dimen/margin_horizontal_8dp</item>
+        <item name="android:paddingTop">@dimen/card_vertical_padding</item>
+    </style>
+
+    <style name="DetailTitleStyle">
+        <item name="android:textSize">@dimen/detail_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DetailTextStyle">
+        <item name="android:textSize">@dimen/item_text_size</item>
+    </style>
+
+    <style name="DescriptionTitleStyle">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/subheading_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescriptionContentStyle">
+        <item name="android:lineSpacingExtra">@dimen/line_space_height</item>
+        <item name="android:textSize">@dimen/item_text_size</item>
+    </style>
+</resources>
